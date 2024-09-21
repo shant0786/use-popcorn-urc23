@@ -220,8 +220,8 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
     onAddWatched(newWatchedMovie);
     onCloseMovie();
 
-    // setAvgRating(Number(imdbRating));
-    // setAvgRating((avgRating) => (avgRating + userRating) / 2);
+    setAvgRating(Number(imdbRating));
+    setAvgRating((avgRating) => (avgRating + userRating) / 2);
     // alert(avgRating);
   }
   useKey("Escape", onCloseMovie);
@@ -289,7 +289,7 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
               </p>
             </div>
           </header>
-          {/* <p>{avgRating}</p> */}
+          <p>{avgRating}</p>
           <section>
             <div className="rating">
               {!isWatched ? (
